@@ -12,7 +12,7 @@ int main() {
     int vet[1000];
     
     for (int i=0; i<1000; i++) {
-        vet[i] = i % t-1;
+        vet[i] = i % t;
 
         cout << "N[" << i << "] = " << vet[i] << '\n';
         }
