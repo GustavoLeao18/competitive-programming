@@ -2,9 +2,8 @@
 
 using namespace std;
 
-
 int main() {
-
+    
     int x, contP, contI;
     
     int vetP[5], vetI[5];
@@ -19,24 +18,32 @@ int main() {
             vetP[contP] = x;
             contP++;
             
-            if (contP > 4) {
+            if (contP == 5) {
                 for (int j=0; j<5; j++) {
-                    cout << "par[" << i << "] = " << vetP[i] << "\n";
+                    cout << "par[" << j << "] = " << vetP[j] << '\n';
                 }
                 contP = 0;
             }
         }
-        else {
+        else if (x % 2 != 0) {
             vetI[contI] = x;
             contI++;
             
-            if (contI > 4) {
+            if (contI == 5) {
                 for (int j=0; j<5; j++) {
-                    cout << "par[" << i << "] = " << vetP[i] << "\n";
+                    cout << "impar[" << j << "] = " << vetI[j] << '\n';
                 }
-                contP = 0;
+                contI = 0;
             }
         }
+    }
+        
+    for (int i=0; i<contI; i++) {
+        cout << "impar[" << i << "] = " << vetI[i] << '\n';
+    }
+    
+    for (int i=0; i<contP; i++) {
+        cout << "par[" << i << "] = " << vetP[i] << '\n';
     }
     
     return 0;
